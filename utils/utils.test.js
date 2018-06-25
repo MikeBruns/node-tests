@@ -6,3 +6,10 @@ it('should add two numbers', () => {
     throw new Error(`Expected 44, got ${res}`);
   }
 });
+
+it('should square a number', () => {
+  var res = utils.square(3);
+  if (res !== 9) {
+    throw new Error(`Expected 9, got ${res}`);
+  }
+});
