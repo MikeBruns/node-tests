@@ -20,6 +20,13 @@ it('should square a number', () => {
   expect(res).toBe(9).toBeA('number');
 });
 
+it('should async square a number', (done) => {
+  utils.asyncSquare(4, (square) => {
+    expect(square).toBe(16).toBeA('number');
+    done();
+  });
+});
+
 it('should verify first and last names are set', () => {
   let user = {
     location: 'Cleveland',
