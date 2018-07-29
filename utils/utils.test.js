@@ -12,6 +12,15 @@ it('should square a number', () => {
   expect(res).toBe(9).toBeA('number');
 });
 
+it('should verify first and last names are set', () => {
+  let user = {
+    location: 'Cleveland',
+    age: '24'
+  };
+  utils.setName(user, 'Michael Bruns');
+  expect(user).toInclude({firstName: 'Michael', lastName: 'Bruns'});
+});
+
 it('should expect some values', () => {
   expect(12).toBe(12);
   expect(12).toNotBe(11);
